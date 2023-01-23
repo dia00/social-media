@@ -1,7 +1,7 @@
 import "./post.css";
 import { CgMoreVertical } from 'react-icons/cg';
 import { FcLike, FcOk } from 'react-icons/fc';
-
+import { Users } from "../../dummyData.js";
 
 
 export default function Post({post}) {
@@ -10,9 +10,9 @@ export default function Post({post}) {
             <div className="postWrapper">
                 <div className="postTop">
                     <div className="postTopLeft">
-                        <img src="/assets/profile-image.jpg" alt="" className="postProfileImage" />
-                        <span className="postUsername">John Doe</span>
-                        <span className="postDate">5 mins ago</span>
+                        <img src={Users.filter((u) => u.id === post?.userId)[0].profilePicture} alt="" className="postProfileImage" />
+                        <span className="postUsername">{Users.filter((u) => u.id === post?.userId)[0].username}</span>
+                        <span className="postDate">{post.date}</span>
                     </div>
                     <div className="postTopRight">
                         <CgMoreVertical/>
@@ -20,18 +20,18 @@ export default function Post({post}) {
                 </div>
                 <div className="postCenter">
                     <span className="postText">
-                        Hello. This is my first post :D    
+                        {post?.desc} 
                     </span>
-                    <img src="/assets/profile-image.jpg" alt="" className="postImage" />
+                    <img src={post.photo} alt="" className="postImage" />
                 </div>
                 <div className="postBottom">
                     <div className="postBottomLeft">
                         <FcOk className="likeIcon"/>
                         <FcLike className="likeIcon"/>
-                        <span className="postLikeCounter">32 people liked it</span>
+                        <span className="postLikeCounter">{post.like} people liked it</span>
                     </div>
                     <div className="postBottomRight">
-                        <span className="postCommentText">9 comments</span>
+                        <span className="postCommentText">{post.comment} comments</span>
                     </div>
                 </div>
             </div>

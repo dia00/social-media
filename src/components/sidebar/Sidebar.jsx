@@ -3,6 +3,9 @@ import { MdRssFeed, MdVideoLibrary, MdWork } from "react-icons/md";
 import { IoIosChatboxes } from "react-icons/io";
 import { HiUserGroup } from "react-icons/hi";
 import { BsFillBookmarkHeartFill, BsQuestionCircleFill, BsFillCalendar2EventFill } from "react-icons/bs";
+import { Users } from "../../dummyData.js";
+import CloseFriend from "../closeFriend/CloseFriend";
+
 
 export default function Sidebar() {
     return (
@@ -45,46 +48,9 @@ export default function Sidebar() {
                 <button className="sidebarButton">Show More</button>
                 <hr className="sidebarHr"/>
                 <ul className="sidebarFriendList">
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img src="/assets/profile-image.jpg" alt="" className="sidebarFriendImage"/>
-                        <span className="sidebarFriendName">Agatha Christie</span>
-                    </li>
+                    {Users.map(u => (
+                        <CloseFriend key={u.id} users={u}/>
+                    ))}
                 </ul>
             </div>
         </div>

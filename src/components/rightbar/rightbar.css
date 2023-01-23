@@ -38,12 +38,6 @@
     list-style: none;
 }
 
-.rightbarFriend {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
 .rightbarProfileImageContainer {
     margin-right: 10px;
     position: relative;
@@ -67,7 +61,3 @@
     border: 2px solid white;
 }
 
-.rightbarUsername {
-    font-weight: 500;
-
-}
