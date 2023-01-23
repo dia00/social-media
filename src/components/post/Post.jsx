@@ -1,10 +1,28 @@
 import "./post.css";
+import { useState } from "react";
 import { CgMoreVertical } from 'react-icons/cg';
 import { FcLike, FcOk } from 'react-icons/fc';
 import { Users } from "../../dummyData.js";
+import { BsGear } from "react-icons/bs";
 
 
 export default function Post({post}) {
+    /*thinking about it
+    function likedPost() {
+        let icon = document.getElementsByClassName("likeIcon");
+        icon.style.width = '30';
+        icon.style.height = '30';
+    }
+    */
+    
+    const [like, setLike] = useState(post.like);
+    const [isLiked, setIsLiked] = useState(false);
+
+    const likeHandler = () => {
+        setLike(isLiked ? like - 1 : like + 1);
+        setIsLiked(!isLiked);
+    }
+
     return (
         <div className="post">
             <div className="postWrapper">
@@ -26,9 +44,9 @@ export default function Post({post}) {
                 </div>
                 <div className="postBottom">
                     <div className="postBottomLeft">
-                        <FcOk className="likeIcon"/>
-                        <FcLike className="likeIcon"/>
-                        <span className="postLikeCounter">{post.like} people liked it</span>
+                        <FcOk className="likeIcon" onClick={likeHandler}/>
+                        <FcLike className="likeIcon" onClick={likeHandler}/>
+                        <span className="postLikeCounter">{like} people liked it</span>
                     </div>
                     <div className="postBottomRight">
                         <span className="postCommentText">{post.comment} comments</span>
