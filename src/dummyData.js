@@ -3,51 +3,71 @@ export const Users = [
       id:1,
       profilePicture: "assets/person/1.png",
       username: "Dora Whimsey",
+      email: "dora@gmail.com",
+      password: "123"
     },
     {
       id:2,
       profilePicture: "assets/person/2.png",
       username: "Janell Shrum",
+      email: "janell@gmail.com",
+      password: "123"
     },
     {
       id:3,
       profilePicture: "assets/person/3.png",
       username: "Alex Durden",
+      email: "alex@gmail.com",
+      password: "123"
     },
     {
       id:4,
       profilePicture: "assets/person/4.png",
       username: "Dora Hawks",
+      email: "dora1@gmail.com",
+      password: "123"
     },
     {
       id:5,
       profilePicture: "assets/person/5.png",
       username: "Thomas Holden",
+      email: "thomas@gmail.com",
+      password: "123"
     },
     {
       id:6,
       profilePicture: "assets/person/6.png",
       username: "Shirley Beauchamp",
+      email: "shirley@gmail.com",
+      password: "123"
     },
     {
       id:7,
       profilePicture: "assets/person/7.png",
       username: "Travis Bennett",
+      email: "travis@gmail.com",
+      password: "123"
     },
     {
       id:8,
       profilePicture: "assets/person/8.png",
       username: "Kristen Thomas",
+      email: "kristen@gmail.com",
+      password: "123"
     },
     {
       id:9,
       profilePicture: "assets/person/9.png",
       username: "Gary Duty",
+      email: "gary@gmail.com",
+      password: "123"
     },
     {
       id:10,
       profilePicture: "assets/person/10.png",
-      username: "Safak Kocaoglu",
+      username: "Jane Doe",
+      email: "jane@gmail.com",
+      password: "123"
     },
   ];
   

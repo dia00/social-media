@@ -1,6 +1,13 @@
+import { Link, useNavigate } from "react-router-dom";
+import { Users } from "../../dummyData.js";
+import { useState } from "react";
 import "./login.css";
 
 export default function Login() {
+    const navigate = useNavigate();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
     return (
         <div className="login">
             <div className="loginWrapper">
@@ -10,12 +17,24 @@ export default function Login() {
                 </div>
                 <div className="loginRight">
                     <div className="loginBox">
-                        <input placeholder="Email" type="date" className="loginInput" />
-                        <input placeholder="Password" className="loginInput" />
-                        <button className="loginButton">Login</button>
+                        <input id="email" type="email" placeholder="Email" className="loginInput" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input id="password" type="password" placeholder="Password" className="loginInput" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <button className="loginButton"
+                                onClick={() => {
+                                    let hasUser = false;
+                                    for(let i = 0; i < Users.length; i++) {
+                                        if(email === Users[i].email && password === Users[i].password) {
+                                            navigate('/');
+                                        }
+                                    }
+                                }}>
+                            Login
+                        </button>
                         <span className="loginForgot">Forgot Password?</span>
-                        <button className="loginRegisterButton">Create an Account</button>
-                    </div>
+                        <Link to="/register">
+                            <button className="loginRegisterButton">Create an Account</button>
+                        </Link>
+                    </div> 
                 </div>
             </div>
         </div>
