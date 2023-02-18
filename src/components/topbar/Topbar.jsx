@@ -6,7 +6,7 @@ export default function Topbar() {
     return (
         <div className="topbarContainer">
             <div className="topbarLeft">
-                <Link to="/home">
+                <Link to="/login">
                     <span className="logo">Indigo</span>
                 </Link>
             </div>
@@ -18,8 +18,12 @@ export default function Topbar() {
             </div>
             <div className="topbarRight">
                 <div className="topbarLinks">
-                    <span className="topbarLink">Homepage</span>
-                    <span className="topbarLink">Timeline</span>
+                    <Link to="/profile">
+                        <span className="topbarLink">My Profile</span>
+                    </Link>
+                    <Link to="/">
+                        <span className="topbarLink">Timeline</span>
+                    </Link>
                 </div>
                 <div className="topbarIcons">
                     <div className="topbarIconItem">
@@ -35,7 +39,9 @@ export default function Topbar() {
                         <span className="topbarIconBadge">1</span>
                     </div>
                 </div>
-                <img src="assets/profile-image.jpg" alt="" className="topbarImage" />
+                <Link to="/profile">
+                    <img src="assets/profile-image.jpg" alt="" className="topbarImage" />
+                </Link>
             </div>
         </div>
     )

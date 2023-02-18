@@ -63,6 +63,11 @@
     margin: 5px;
 }
 
+.loginError {
+    text-align: center;
+    color: red;
+}
+
 .loginForgot {
     text-align: center;
     color:cadetblue; 

@@ -6,7 +6,7 @@ import Online from "../online/Online";
 export default function Rightbar({ profile }) {
     const Advertisement = () => {
         return (
-            <img src="/assets/profile-image.jpg" alt="" className="rightbarAd" />
+            <img src="/assets/ad.jpg" alt="" className="rightbarAd" />
         )
     }
 

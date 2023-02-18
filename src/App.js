@@ -15,10 +15,6 @@ function App() {
       element: <Home/>,
     },
     {
-      path: "/home",
-      element: <Login/>,
-    },
-    {
       path: "/profile",
       element: <Profile/>,
     },
