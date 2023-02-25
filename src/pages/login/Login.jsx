@@ -20,6 +20,10 @@ export default function Login() {
             }
     }}
 
+    const handleRegister = () => {
+        navigate('/register');
+    }
+
     return (
         <div className="login">
             <div className="loginWrapper">
@@ -36,11 +40,10 @@ export default function Login() {
                             Login
                         </button>
                         <div className="loginError"> {error} </div>
-                        <span className="loginForgot">Forgot Password?</span>
-                        <Link to="/register">
-                            <button className="loginRegisterButton">Create an Account</button>
-                        </Link>
-                        
+                        <span className="loginForgot">Forgot Password?</span> 
+                       
+                            <button onClick={handleRegister} className="loginRegisterButton">Create an Account</button>
+                      
                     </div> 
                 </div>
             </div>

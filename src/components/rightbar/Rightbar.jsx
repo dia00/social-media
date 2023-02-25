@@ -2,6 +2,7 @@ import "./rightbar.css";
 import { FcRating } from "react-icons/fc";
 import { Users } from "../../dummyData.js";
 import Online from "../online/Online";
+import CloseFriend from "../closeFriend/CloseFriend";
 
 export default function Rightbar({ profile }) {
     const Advertisement = () => {
@@ -49,71 +50,20 @@ export default function Rightbar({ profile }) {
             </div>
             </div>
             <h4 className="rightbarTitle">User Friends</h4>
-            <div className="rightbarFollowings">
-            <div className="rightbarFollowing">
-                <img
-                src="assets/person/6.png"
-                alt=""
-                className="rightbarFollowingImage"
-                />
-                <span className="rightbarFollowingName">Agatha Christie</span>
-            </div>
-            <div className="rightbarFollowing">
-                <img
-                src="assets/person/4.png"
-                alt=""
-                className="rightbarFollowingImage"
-                />
-                <span className="rightbarFollowingName">Agatha Christie</span>
-            </div>
-            <div className="rightbarFollowing">
-                <img
-                src="assets/person/9.png"
-                alt=""
-                className="rightbarFollowingImage"
-                />
-                <span className="rightbarFollowingName">Agatha Christie</span>
-            </div>
-            <div className="rightbarFollowing">
-                <img
-                src="assets/person/10.png"
-                alt=""
-                className="rightbarFollowingImage"
-                />
-                <span className="rightbarFollowingName">Agatha Christie</span>
-            </div>
-            <div className="rightbarFollowing">
-                <img
-                src="assets/person/1.png"
-                alt=""
-                className="rightbarFollowingImage"
-                />
-                <span className="rightbarFollowingName">Agatha Christie</span>
-            </div>
-            <div className="rightbarFollowing">
-                <img
-                src="assets/person/2.png"
-                alt=""
-                className="rightbarFollowingImage"
-                />
-                <span className="rightbarFollowingName">Agatha Christie</span>
-            </div>
-            <div className="rightbarFollowing">
-                <img
-                src="assets/person/7.png"
-                alt=""
-                className="rightbarFollowingImage"
-                />
-                <span className="rightbarFollowingName">Agatha Christie</span>
-            </div>
-            <div className="rightbarFollowing">
-                <img
-                src="assets/person/3.png"
-                alt=""
-                className="rightbarFollowingImage"
-                />
-                <span className="rightbarFollowingName">Agatha Christie</span>
-            </div>
+            <div className="closeFriendList">
+                {/* <div className="rightbarFollowing">
+                    <img
+                    src="assets/person/6.png"
+                    alt=""
+                    className="rightbarFollowingImage"
+                    />
+                    <span className="rightbarFollowingName">Agatha Christie</span>
+                </div>
+                 */}
+            {Users.map((u) => (
+                    <CloseFriend key={u.id} users={u}/>
+                    ))}
+
             </div>
         </>
         );

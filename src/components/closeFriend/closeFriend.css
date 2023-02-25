@@ -1,13 +1,37 @@
-.sidebarFriend {
+.closeFriendList { 
     display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.sidebarFriendImage {
-    width: 32px;
+.closeFriend {
+    /* display: flex;
+    align-items: center;
+    margin-bottom: 15px; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    cursor: pointer;
+    flex: 0 0 50%;
+}
+
+.closeFriendImage {
+    /* width: 32px;
     height: 32px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 10px;
+    margin-right: 10px; */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.closeFriendName {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
 }

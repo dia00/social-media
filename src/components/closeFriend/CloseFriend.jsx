@@ -2,9 +2,9 @@ import "./closeFriend.css";
 
 export default function CloseFriend({users}) {
     return (
-        <li className="sidebarFriend">
-            <img src={users.profilePicture} alt="" className="sidebarFriendImage"/>
-            <span className="sidebarFriendName">{users.username}</span>
+        <li className="closeFriend">
+            <img src={users.profilePicture} alt="" className="closeFriendImage"/>
+            <span className="closeFriendName">{users.username}</span>
         </li>
     )
 }
