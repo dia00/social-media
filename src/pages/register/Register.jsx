@@ -11,10 +11,10 @@ export default function Register() {
                 </div>
                 <div className="loginRight">
                     <div className="loginBox">
-                        <input placeholder="Username" className="loginInput" />
-                        <input placeholder="Email" className="loginInput" />
-                        <input placeholder="Password" className="loginInput" />
-                        <input placeholder="Password Again" className="loginInput" />
+                        <input id="username" placeholder="Username" className="loginInput" />
+                        <input id="email" placeholder="Email" className="loginInput" />
+                        <input id="password" placeholder="Password" className="loginInput" />
+                        <input id="passwordAgain" placeholder="Password Again" className="loginInput" />
                         <button className="loginButton">Sign Up</button>
                         <Link to="/login">
                             <span className="loginForgot">Log In An Existing Account</span>

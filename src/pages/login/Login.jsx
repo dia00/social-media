@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Users } from "../../dummyData.js";
 import { useState } from "react";
 import "./login.css";

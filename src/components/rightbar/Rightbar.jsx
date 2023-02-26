@@ -1,6 +1,7 @@
 import "./rightbar.css";
 import { FcRating } from "react-icons/fc";
 import { Users } from "../../dummyData.js";
+import Weather from "../weather/Weather";
 import Online from "../online/Online";
 import CloseFriend from "../closeFriend/CloseFriend";
 
@@ -19,7 +20,8 @@ export default function Rightbar({ profile }) {
             <span className="birthdayText">
                 <b>Me</b> and <b>5 other friends</b> have their birthday today
             </span>
-            </div>
+            </div> 
+            <Weather/>   
             <Advertisement/>
             <h4 className="rightbarTitle">Online Friends</h4>
             <ul className="rightbarFriendList">
@@ -51,15 +53,6 @@ export default function Rightbar({ profile }) {
             </div>
             <h4 className="rightbarTitle">User Friends</h4>
             <div className="closeFriendList">
-                {/* <div className="rightbarFollowing">
-                    <img
-                    src="assets/person/6.png"
-                    alt=""
-                    className="rightbarFollowingImage"
-                    />
-                    <span className="rightbarFollowingName">Agatha Christie</span>
-                </div>
-                 */}
             {Users.map((u) => (
                     <CloseFriend key={u.id} users={u}/>
                     ))}
